@@ -281,7 +281,7 @@ export default function Orderbook() {
             </SkeletonTheme>
           ) : (
             <div
-              className={`current-spread hover:scale-105 transition-all transition-duration-300 ease-in-out p-4 rounded-lg shadow-md ${
+              className={`current-spread p-4 rounded-lg shadow-md ${
                 darkMode
                   ? "bg-gradient-to-r from-gray-700 via-gray-900 to-black hover:bg-gradient-to-l hover:from-gray-700 hover:via-gray-900 hover:to-black"
                   : "bg-gradient-to-r from-white via-gray-100 to-gray-200 hover:bg-gradient-to-l hover:from-gray-200 hover:via-gray-100 hover:to-white"
