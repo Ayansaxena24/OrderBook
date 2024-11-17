@@ -9,12 +9,22 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/material": "^6.1.7",
+    "autoprefixer": "^10.4.20",
+    "axios": "^1.7.7",
+    "chart.js": "^4.4.6",
+    "chartjs-plugin-annotation": "^3.1.0",
+    "framer-motion": "^11.11.17",
+    "next": "15.0.3",
     "react": "19.0.0-rc-66855b96-20241106",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "19.0.0-rc-66855b96-20241106",
-    "next": "15.0.3"
+    "react-loading-skeleton": "^3.5.0"
   },
   "devDependencies": {
-    "postcss": "^8",
+    "postcss": "^8.4.49",
     "tailwindcss": "^3.4.1"
   }
 }
