@@ -43,8 +43,6 @@ This Next.js application displays a real-time **orderbook** with associated **ma
 ### 5. **Responsive Design**
 - The application is **fully responsive**, ensuring a great user experience across a variety of screen sizes, from mobile devices to desktops.
 
-### Screenshot: Mobile View
-![Mobile View](path-to-screenshot/mobile-view.png)
 
 ## Bonus Features
 
@@ -55,8 +53,12 @@ This Next.js application displays a real-time **orderbook** with associated **ma
 - **Switch Between Trading Pairs**: 
     - Users can switch between different trading pairs (e.g., **ETH-USD**, **XRP-USD**) using a dropdown or similar component.
 
-### Screenshot: Switching Trading Pairs
-![Switching Trading Pairs](path-to-screenshot/switch-trading-pairs.png)
+### Preview: Switching Trading Pairs
+![Switching Trading Pairs](https://github.com/user-attachments/assets/f2cd6d88-8b84-4659-b1e1-fc9086d95d5e)
+
+### Preview: Light and Dark Mode
+![LightDarkMode](https://github.com/user-attachments/assets/ea8495c7-406b-4f4b-bc22-36254808136e)
+
 
 ---
 
@@ -69,7 +71,7 @@ This Next.js application displays a real-time **orderbook** with associated **ma
   - [Material UI](https://mui.com/) (for UI components like Popover, Buttons, etc.)
   
 - **API**: 
-  - Real-time market data fetched from **Binance API**, **Coinbase API**, or similar for the **BTC-USD** orderbook.
+  - Real-time market data fetched from **Binance API**.
 
 ---
 
@@ -78,7 +80,7 @@ This Next.js application displays a real-time **orderbook** with associated **ma
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/crypto-orderbook.git
+git clone https://github.com/Ayansaxena24/OrderBook.git
 ```
 
 ### 2. Install Dependencies
