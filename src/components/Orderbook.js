@@ -36,8 +36,17 @@ export default function Orderbook() {
   };
 
   const handleNext = () => {
-    handlePopoverClose();
-    setCurrentStep((prev) => prev + 1);
+    // Delay the update of currentStep to allow the transition
+    setTimeout(() => {
+      setCurrentStep((prev) => prev + 1);
+    }, 500); // Adjust the delay as needed
+  };
+
+  const handleBack = () => {
+    // Delay the update of currentStep to allow the transition
+    setTimeout(() => {
+      setCurrentStep((prev) => prev - 1);
+    }, 500); // Adjust the delay as needed
   };
 
   // Determine if popover is open
@@ -52,11 +61,21 @@ export default function Orderbook() {
     },
     {
       target: ".current-spread",
-      content: "Here, you can see the current spread between bids and asks. \n Spread = Best Ask Price − Best Bid Price",
+      content: (
+        <>
+          Here, you can see the current spread between bids and asks. <br />
+          Note that Spread = Best Ask Price − Best Bid Price
+        </>
+      ),
     },
     {
       target: ".orderbook-imbalance",
-      content: "Here, you can see the current orderbook imbalance.",
+      content: (
+        <>
+          Here, you can see the current orderbook imbalance %. <br />
+          Orderbook Imbalance = The difference between buy and sell orders at different price levels.
+        </>
+      ),
     },
     {
       target: ".spread-history",
@@ -68,9 +87,14 @@ export default function Orderbook() {
     },
     {
       target: ".market-depth",
-      content:
-        "Finally, this chart gives you a visual representation of the market depth.",
-    },
+      content: (
+        <>
+          Finally, this chart gives you a visual representation of the market depth. <br />
+          Market depth refers to the ability of the market to sustain large orders without impacting the price of the asset. This chart shows the quantity of orders at each price level on both the buy and sell sides.
+        </>
+      ),
+    }
+    
     // Add more steps as needed
   ];
 
@@ -131,6 +155,7 @@ export default function Orderbook() {
 
   const calculateSpread = (bids, asks) => {
     if (bids.length === 0 || asks.length === 0) return 0;
+    console.log(bids, asks, 'bids and asks');
     const bestBid = parseFloat(bids[0][0]);
     const bestAsk = parseFloat(asks[0][0]);
     return bestAsk - bestBid;
@@ -191,6 +216,7 @@ export default function Orderbook() {
           steps={guideSteps}
           currentStep={currentStep}
           onNext={handleNext}
+          onPrev={handleBack}
           onClose={handleTourClose}
           darkMode={darkMode}
         />
