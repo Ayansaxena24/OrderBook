@@ -80,7 +80,7 @@ This Next.js application displays a real-time **orderbook** with associated **ma
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/crypto-orderbook.git
+git clone https://github.com/Ayansaxena24/OrderBook.git
 ```
 
 ### 2. Install Dependencies
