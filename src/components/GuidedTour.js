@@ -29,7 +29,7 @@ const GuidedTour = ({
           setAnchorEl(element);
           const rect = element.getBoundingClientRect();
           setTargetRect(rect);
-        }, 0); // Give enough time for smooth scroll
+        }, 0); 
       }
     }
   }, [currentStep, steps]);
@@ -70,7 +70,6 @@ const GuidedTour = ({
         <div className="absolute inset-0 rounded-lg border-2 border-blue-500 animate-pulse" />
       </div>
 
-      {/* MUI Popover */}
       <Popover
         open={Boolean(anchorEl)}
         anchorEl={anchorEl}

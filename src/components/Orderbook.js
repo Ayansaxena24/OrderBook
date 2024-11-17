@@ -36,17 +36,16 @@ export default function Orderbook() {
   };
 
   const handleNext = () => {
-    // Delay the update of currentStep to allow the transition
+
     setTimeout(() => {
       setCurrentStep((prev) => prev + 1);
-    }, 500); // Adjust the delay as needed
+    }, 500); 
   };
 
   const handleBack = () => {
-    // Delay the update of currentStep to allow the transition
     setTimeout(() => {
       setCurrentStep((prev) => prev - 1);
-    }, 500); // Adjust the delay as needed
+    }, 500); 
   };
 
   // Determine if popover is open
@@ -94,8 +93,6 @@ export default function Orderbook() {
         </>
       ),
     }
-    
-    // Add more steps as needed
   ];
 
   useEffect(() => {
@@ -237,35 +234,39 @@ export default function Orderbook() {
           >
             {handleTitle()}
           </motion.h1>
-          <div className="w-[40%] flex justify-between">
-            <motion.button
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-              onClick={startTour}
-              className="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-sm hover:bg-blue-600"
-            >
-              Start Tour
-            </motion.button>
-            <motion.select
-              value={tradingPairs}
-              onChange={handleSelect}
-              className={`bg-gray-800 text-white px-4 py-2 rounded-lg shadow-sm`}
-            >
-              <option value="btc">BTC-USD</option>
-              <option value="eth">ETH-USD</option>
-              <option value="xrp">LTC-USD</option>
-            </motion.select>
-            <motion.button
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-              onClick={handleDarkMode}
-              className="bg-gray-800 text-white px-4 py-2 rounded-lg shadow-sm"
-            >
-              {darkMode ? "Light Mode" : "Dark Mode"}
-            </motion.button>
-          </div>
+          <div className="flex flex-col md:flex-row w-full md:w-[40%] gap-4 md:justify-between">
+  <motion.button
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1 }}
+    onClick={startTour}
+    className="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-sm hover:bg-blue-600"
+  >
+    Start Tour
+  </motion.button>
+  <motion.select
+    value={tradingPairs}
+    onChange={handleSelect}
+    className={`px-4 py-2 rounded-lg shadow-sm text-center ${
+      darkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-800 border border-gray-300'
+    }`}  >
+    <option value="btc">BTC-USD</option>
+    <option value="eth">ETH-USD</option>
+    <option value="xrp">LTC-USD</option>
+  </motion.select>
+  <motion.button
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
+  onClick={handleDarkMode}
+  className={`px-4 py-2 rounded-lg shadow-sm ${
+    darkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-800 border border-gray-300'
+  }`}
+>
+  {darkMode ? "Light Mode" : "Dark Mode"}
+</motion.button>
+
+</div>
         </div>
 
         <motion.div
@@ -347,7 +348,7 @@ export default function Orderbook() {
               Spread History
             </h2>
             <div className="h-[400px]">
-              <SpreadIndicator spreadHistory={spreadHistory} tradingPairs={tradingPairs} />
+              <SpreadIndicator spreadHistory={spreadHistory} tradingPairs={tradingPairs} darkMode={darkMode} />
             </div>
           </motion.div>
         )}

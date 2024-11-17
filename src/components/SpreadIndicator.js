@@ -32,6 +32,7 @@ export default function SpreadIndicator({ spreadHistory, tradingPairs }) {
 
   const options = {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       tooltip: {
         mode: 'nearest',
@@ -60,5 +61,11 @@ export default function SpreadIndicator({ spreadHistory, tradingPairs }) {
     },
   };
 
-  return <Line data={data} options={options} />;
+  return (
+    <div className="w-full overflow-x-auto">
+      <div className="min-w-[600px] h-[400px]">
+        <Line data={data} options={options} />
+      </div>
+    </div>
+  );
 }
