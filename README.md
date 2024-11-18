@@ -67,7 +67,7 @@ This Next.js application displays a real-time **orderbook** with associated **ma
 - **Frontend**: 
   - [Next.js](https://nextjs.org/) (React framework)
   - [Tailwind CSS](https://tailwindcss.com/) (for responsive design and styling)
-  - [Chart.js](https://www.chartjs.org/) or [D3.js](https://d3js.org/) (for data visualization)
+  - [Chart.js](https://www.chartjs.org/) (for data visualization)
   - [Material UI](https://mui.com/) (for UI components like Popover, Buttons, etc.)
   
 - **API**: 
