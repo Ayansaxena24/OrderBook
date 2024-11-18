@@ -199,11 +199,11 @@ export default function Orderbook() {
 
   const handleTitle = () => {
     if (tradingPairs === "btc") {
-      return "BTC-USD Orderbook";
+      return "Real-Time Cryptocurrency Trading App";
     } else if (tradingPairs === "eth") {
-      return "ETH-USD Orderbook";
+      return "Real-Time Cryptocurrency Trading App";
     }
-    return "LTC-USD Orderbook";
+    return "Real-Time Cryptocurrency Trading App";
   };
 
   return (
@@ -283,7 +283,7 @@ export default function Orderbook() {
             <div
               className={`current-spread p-4 rounded-lg shadow-md ${
                 darkMode
-                  ? "bg-gradient-to-r from-gray-700 via-gray-900 to-black hover:bg-gradient-to-l hover:from-gray-700 hover:via-gray-900 hover:to-black"
+                  ? "bg-gradient-to-r from-gray-700 via-gray-900 to-black"
                   : "bg-gradient-to-r from-white via-gray-100 to-gray-200 hover:bg-gradient-to-l hover:from-gray-200 hover:via-gray-100 hover:to-white"
               }`}
             >
