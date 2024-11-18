@@ -53,7 +53,7 @@ This Next.js application displays a real-time **orderbook** with associated **ma
 - **Switch Between Trading Pairs**: 
     - Users can switch between different trading pairs (e.g., **ETH-USD**, **XRP-USD**) using a dropdown or similar component.
 
-### Preview: Switching Trading Pairs
+### Preview: Switching Trading Pairs And Skeleton Loading
 ![Switching Trading Pairs](https://github.com/user-attachments/assets/f2cd6d88-8b84-4659-b1e1-fc9086d95d5e)
 
 ### Preview: Light and Dark Mode
